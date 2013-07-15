@@ -18,8 +18,7 @@ end
 #  three_array(1, 2, 3) #=> [1, 2, 3]
 #
 def three_array(a, b, c)
-    # how would you write an array containing
-    # a, b and c
+    [a, b, c]
 end
 
 # returns a new array containing the 
@@ -30,8 +29,7 @@ end
 #   first_and_last([1]) #=> [1, 1]
 #
 def first_and_last(input_array)
-    first = input_array.first
-    # ....
+    [input_array.first, input_array.last]
 end
 
 # last_two should return an array containing the last
@@ -40,8 +38,7 @@ end
 #   last_two([1,2,3,4,5]) #=> [4, 5]
 #
 def last_two(input_array)
-    # the first two elements would be a[0..1]
-    # what if you used negative numbers?
+    input_array[-2..-1]
 end
 
 # rotate1 takes the input array and returns a new
@@ -51,10 +48,7 @@ end
 #   rotate1([1,2,3,4]) #=> [2,3,4,1]
 #
 def rotate1(input_array)
-    # can you find an expression for an array containing
-    # the second up to the last element?
-
-    # can you then add the first element to the end?
+    input_array[1..-1] << input_array[0]
 end
 
 # rotate2 is the same as rotate1, except the first
@@ -63,7 +57,7 @@ end
 #   rotate2([1,2,3,4]) #=> [3,4,1,2]
 #
 def rotate2(input_array)
-    # can you use rotate1 to help you?
+    rotate1(rotate1(input_array))
 end
 
 # even_or_bust returns the original array if it has
@@ -75,8 +69,11 @@ end
 #    even_or_bust([1,2,3,4]) #=> [1,2,3,4]
 #
 def even_or_bust(input_array)
-    # how do you find the length of an array?
-    # how can you test if it is even?
+    if input_array.length.even?
+        input_array
+    else
+        []
+    end
 end
 
 # needle_haystack returns true if the word 'needle'
@@ -86,8 +83,7 @@ end
 #   needle_haystack([4,'needle', 8]) #=> true
 #
 def needle_haystack(haystack)
-    # there's a special method for seeing if somthing
-    # is in an array ...
+    haystack.include?('needle')
 end
 
 # sum_of_largest_two returns the sum of the largest
@@ -96,7 +92,8 @@ end
 #   sum_of_largest_two([11, 2, 3, 4]) #=> 15
 #
 def sum_of_largest_two(array_of_integers)
-    # what if you sorted the array first?
+    sorted = array_of_integers.sort
+    sorted[-1] + sorted[-2]
 end
 
 # add_a_dog returns the input array with the word
@@ -105,7 +102,7 @@ end
 #    add_a_dog([1,2,3]) #=> [1,2,3,'dog']
 #
 def add_a_dog(input_array)
-    # how can you add something to an array?
+    input_array << 'dog'
 end
 
 # underscorize takes a sentence and replaces
@@ -114,7 +111,7 @@ end
 #   underscorize("the cat sat on the mat") #=> "the_cat_sat_on_the_mat"
 #
 def underscorize(sentence)
-    # what if you converted it to an array and then back?
+    sentence.split.join('_')
 end
 
 
@@ -124,7 +121,5 @@ end
 #   interleave([1,2,3], [4,5,6]) #=> [1,4,2,5,3,6]
 #
 def interleave(array1, array2)
-    # there's an special operation for combining two
-    # arrays. It almost does what you want, but you'll have
-    # to fix it afterwards.
+    array1.zip(array2).flatten
 end
