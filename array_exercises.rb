@@ -18,7 +18,8 @@ end
 #  three_array(1, 2, 3) #=> [1, 2, 3]
 #
 def three_array(a, b, c)
-    # TODO
+    # how would you write an array containing
+    # a, b and c
 end
 
 # returns a new array containing the 
@@ -29,7 +30,8 @@ end
 #   first_and_last([1]) #=> [1, 1]
 #
 def first_and_last(input_array)
-    # TODO
+    first = input_array.first
+    # ....
 end
 
 # last_two should return an array containing the last
@@ -38,7 +40,8 @@ end
 #   last_two([1,2,3,4,5]) #=> [4, 5]
 #
 def last_two(input_array)
-    # TODO
+    # the first two elements would be a[0..1]
+    # what if you used negative numbers?
 end
 
 # rotate1 takes the input array and returns a new
@@ -48,7 +51,10 @@ end
 #   rotate1([1,2,3,4]) #=> [2,3,4,1]
 #
 def rotate1(input_array)
-    # TODO
+    # can you find an expression for an array containing
+    # the second up to the last element?
+
+    # can you then add the first element to the end?
 end
 
 # rotate2 is the same as rotate1, except the first
@@ -57,7 +63,7 @@ end
 #   rotate2([1,2,3,4]) #=> [3,4,1,2]
 #
 def rotate2(input_array)
-    # TODO
+    # can you use rotate1 to help you?
 end
 
 # even_or_bust returns the original array if it has
@@ -69,7 +75,8 @@ end
 #    even_or_bust([1,2,3,4]) #=> [1,2,3,4]
 #
 def even_or_bust(input_array)
-    # TODO
+    # how do you find the length of an array?
+    # how can you test if it is even?
 end
 
 # needle_haystack returns true if the word 'needle'
@@ -79,7 +86,8 @@ end
 #   needle_haystack([4,'needle', 8]) #=> true
 #
 def needle_haystack(haystack)
-    # TODO
+    # there's a special method for seeing if somthing
+    # is in an array ...
 end
 
 # sum_of_largest_two returns the sum of the largest
@@ -88,7 +96,7 @@ end
 #   sum_of_largest_two([11, 2, 3, 4]) #=> 15
 #
 def sum_of_largest_two(array_of_integers)
-    # TODO
+    # what if you sorted the array first?
 end
 
 # add_a_dog returns the input array with the word
@@ -97,7 +105,7 @@ end
 #    add_a_dog([1,2,3]) #=> [1,2,3,'dog']
 #
 def add_a_dog(input_array)
-    # TODO
+    # how can you add something to an array?
 end
 
 # underscorize takes a sentence and replaces
@@ -106,7 +114,7 @@ end
 #   underscorize("the cat sat on the mat") #=> "the_cat_sat_on_the_mat"
 #
 def underscorize(sentence)
-    # TODO
+    # what if you converted it to an array and then back?
 end
 
 
@@ -116,5 +124,7 @@ end
 #   interleave([1,2,3], [4,5,6]) #=> [1,4,2,5,3,6]
 #
 def interleave(array1, array2)
-    # TODO
+    # there's an special operation for combining two
+    # arrays. It almost does what you want, but you'll have
+    # to fix it afterwards.
 end
