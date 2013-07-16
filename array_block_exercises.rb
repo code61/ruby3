@@ -8,7 +8,7 @@
 #   -> 3 is an element
 #   #=> nil
 def print_elements(input_array)
-    # TODO
+    input_array.each {|n| puts "#{n} is an element"}
 end
 
 
@@ -23,7 +23,7 @@ end
 #   #=> nil
 #
 def star_bars(array_of_integers)
-    # TODO
+    array_of_integers.each {|n| puts '*'* n}
 end
 
 # sum takes an array of integers and returns
@@ -32,7 +32,9 @@ end
 #   sum([3,2,5,1]) #=> 11
 #
 def sum(array_of_integers)
-    # TODO
+    sum = 0
+    array_of_integers.each {|n| s+=n}
+    sum
 end
 
 # square_the_values takes an array of integers
@@ -42,7 +44,7 @@ end
 #   square_the_values([4,5,1]) #=> [16, 25, 1]
 #
 def square_the_values(array_of_integers)
-    # TODO
+    array_of_integers.map {|n| n**2}
 end
 
 
@@ -52,7 +54,12 @@ end
 #   reflect("slap a dog") #=> "pals a god"
 #
 def reflect(sentence)
-    # TODO
+    # split sentence into array
+    array = sentence.split
+    # reverse the letters in each word
+    array = array.map {|w| w.reverse}
+    # join them up
+    array.join(" ")
 end
 
 
