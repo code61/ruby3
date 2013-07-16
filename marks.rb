@@ -33,12 +33,11 @@ def display_marks
     # load in the marks
     marks = CSV.read('marks.csv', :headers => true).to_a
 
-    # TODO: fix the mistakes in the code below this point
-    student_total = 0
-    marks.each do |line|
+    marks[1..-1].each do |line|
+        student_total = 0
         name = line.first
         line[1..-1].each {|g| student_total += g.to_i }
-        summary(name, student_total, grade(student_total))
+        puts summary(name, student_total, grade(student_total))
     end
     return nil
 end
