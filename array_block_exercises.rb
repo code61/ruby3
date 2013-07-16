@@ -24,6 +24,7 @@ end
 #
 def star_bars(array_of_integers)
     array_of_integers.each {|n| puts '*'* n}
+    nil
 end
 
 # sum takes an array of integers and returns
@@ -101,7 +102,7 @@ end
 #
 def interesting_words(sentence, stop_word_array=['a', 'the', 'on'])
     sentence.split.select do |word|
-        !stop_word_array.inlcude?(word)
+        !stop_word_array.include?(word)
     end
 end
 
@@ -119,5 +120,5 @@ end
 #
 #  biggest_number([1,5,2]) #=> 5
 def biggest_number(array_of_integers)
-    array_of_words.sort.last
+    array_of_integers.sort.last
 end
