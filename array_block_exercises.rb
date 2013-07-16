@@ -34,7 +34,7 @@ end
 #
 def sum(array_of_integers)
     sum = 0
-    array_of_integers.each {|n| s+=n}
+    array_of_integers.each {|n| sum+=n}
     sum
 end
 
@@ -91,7 +91,7 @@ end
 #   long_words("it is a beautiful day", 3) #=> "beautiful day"
 #
 def long_words(words, length)
-    words.split.select {|w| w.length >= length}
+    words.split.select {|w| w.length >= length}.join(" ")
 end
 
 
