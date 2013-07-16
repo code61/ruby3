@@ -8,7 +8,8 @@
 #   -> 3 is an element
 #   #=> nil
 def print_elements(input_array)
-    # TODO
+    # use each to iterate over the array
+    # use puts to print each line out
 end
 
 
@@ -23,7 +24,7 @@ end
 #   #=> nil
 #
 def star_bars(array_of_integers)
-    # TODO
+    # Try "*" * 4 in irb
 end
 
 # sum takes an array of integers and returns
@@ -32,7 +33,9 @@ end
 #   sum([3,2,5,1]) #=> 11
 #
 def sum(array_of_integers)
-    # TODO
+    sum_so_far = 0
+    # then iterate over the array, increasing
+    # sum_so_far as you go
 end
 
 # square_the_values takes an array of integers
@@ -42,7 +45,7 @@ end
 #   square_the_values([4,5,1]) #=> [16, 25, 1]
 #
 def square_the_values(array_of_integers)
-    # TODO
+    # map is your friend here!
 end
 
 
@@ -52,7 +55,8 @@ end
 #   reflect("slap a dog") #=> "pals a god"
 #
 def reflect(sentence)
-    # TODO
+    # again think about map
+    # try "hello".reverse in irb
 end
 
 
@@ -62,7 +66,7 @@ end
 #
 #   big_numbers([100, 150, 4, 2]) #=> [150]
 def big_numbers(array_of_integers)
-    # TODO
+    # try using select
 end
 
 # sum_of_big_numbers takes an array of integers and 
@@ -72,7 +76,8 @@ end
 #   sum_of_big_numbers([101, 45, 130]) #=> 231
 #
 def sum_of_big_numbers(array_of_integers)
-    # TODO
+    # what methods have you already written 
+    # that could help?
 end
 
 # long_words takes an string of words and
@@ -83,7 +88,9 @@ end
 #   long_words("it is a beautiful day", 3) #=> "beautiful day"
 #
 def long_words(words, length)
-    # TODO
+    # split will give you an array of words
+    # select will let you select some
+    # join will put them back together
 end
 
 
@@ -93,7 +100,7 @@ end
 #    interesting_words("the cat sat on the mat", ["the", "on"]) #=> ["cat", "sat", "mat"]
 #
 def interesting_words(sentence, stop_word_array=['a', 'the', 'on'])
-    # TODO
+    # you might need to use include?
 end
 
 # sorts the list of words, returning the shortest
@@ -101,7 +108,7 @@ end
 #
 #   shortest_first(['flea', 'i', 'the', 'be']) #=> ['i', 'be', 'the', 'flea']
 def shortest_first(array_of_words)
-    # TODO
+    # how do you use sort to sort by word length?
 end
 
 
@@ -110,5 +117,5 @@ end
 #
 #  biggest_number([1,5,2]) #=> 5
 def biggest_number(array_of_integers)
-    # TODO
+    # what if you sorted first?
 end
