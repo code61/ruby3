@@ -69,7 +69,7 @@ end
 #
 #   big_numbers([100, 150, 4, 2]) #=> [150]
 def big_numbers(array_of_integers)
-    # TODO
+    array_of_integers.select {|n| n > 100}
 end
 
 # sum_of_big_numbers takes an array of integers and 
@@ -79,7 +79,7 @@ end
 #   sum_of_big_numbers([101, 45, 130]) #=> 231
 #
 def sum_of_big_numbers(array_of_integers)
-    # TODO
+    sum(big_numbers(array_of_integers))
 end
 
 # long_words takes an string of words and
@@ -90,7 +90,7 @@ end
 #   long_words("it is a beautiful day", 3) #=> "beautiful day"
 #
 def long_words(words, length)
-    # TODO
+    words.split.select {|w| w.length >= length}
 end
 
 
@@ -100,7 +100,9 @@ end
 #    interesting_words("the cat sat on the mat", ["the", "on"]) #=> ["cat", "sat", "mat"]
 #
 def interesting_words(sentence, stop_word_array=['a', 'the', 'on'])
-    # TODO
+    sentence.split.select do |word|
+        !stop_word_array.inlcude?(word)
+    end
 end
 
 # sorts the list of words, returning the shortest
@@ -108,7 +110,7 @@ end
 #
 #   shortest_first(['flea', 'i', 'the', 'be']) #=> ['i', 'be', 'the', 'flea']
 def shortest_first(array_of_words)
-    # TODO
+    array_of_words.sort {|a, b| a.length <=> b.length}
 end
 
 
@@ -117,5 +119,5 @@ end
 #
 #  biggest_number([1,5,2]) #=> 5
 def biggest_number(array_of_integers)
-    # TODO
+    array_of_words.sort.last
 end
