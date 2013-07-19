@@ -113,7 +113,7 @@ end
 # interleave takes two arrays of the same length
 # and returns an array with their elements interleaved
 #
-#   interleave([1,2,3], [4,5,6]) #=> [1,3,2,4,3,6]
+#   interleave([1,2,3], [4,5,6]) #=> [1,4,2,5,3,6]
 #
 def interleave(array1, array2)
     # TODO
